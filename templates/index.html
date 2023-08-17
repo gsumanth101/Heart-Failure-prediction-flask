@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="C:\Users\Sumanth1\Desktop\New folder\Heart failure prediction using flask\static\css\main.css">
+    <title>Investment Prediction </title>
+</head>
+<body>
+    <header>
+        <h1>Health Monitering</h1>
+    </header>
+    <br><br>
+       
+    <main>
+   
+    <div class="container">
+            <section>
+              <h1 style="color:white;; text-align:center;font-weight:1000">Heart Failure Prediction </h1>
+            </section>
+        <div class="form">
+            <form action='/predict' method="POST">
+                     <div class="row">
+        <div class="input-field col s4">
+            <label for="age"><b>Age</b></label>
+            <br>
+          <input placeholder="Enter your age" name="age" id="age" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="anaemia"><b>Anaemia</b></label>
+            <br>
+          <input id="anaemia" name="anaemia" placeholder="Enter 1 for yes and 0 for No"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="creatinine_phosphokinase"><b>Creatinine Phosphokinase</b></label>
+            <br>
+          <input id="creatinine_phosphokinase" name="creatinine_phosphokinase" placeholder="Enter the test value" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+          <label for="diabetes"><b>Diabetes</b></label>
+          <br>
+        <input id="diabetes" name="diabetes" placeholder="Enter 1 for yes and 0 for No" type="text" class="validate">
+
+      </div>
+      <div class="input-field col s4">
+        <label for="ejection_fraction"><b>Ejection Fraction</b></label>
+        <br>
+      <input id="ejection_fraction" name="ejection_fraction" placeholder="Enter the test value" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+      <label for="high_blood_pressure"><b>Blood Pressure</b></label>
+      <br>
+    <input id="high_blood_pressure" name="high_blood_pressure" placeholder="Enter 1 for High and 0 for Low" type="text" class="validate">
+
+  </div>
+  <div class="input-field col s4">
+    <label for="platelets"><b>Blood Platelets</b></label>
+    <br>
+  <input id="platelets" name="platelets" placeholder="Enter the test value" type="text" class="validate">
+
+</div>
+<div class="input-field col s4">
+  <label for="serum_creatinine"><b>Serum creatinine</b></label>
+  <br>
+<input id="serum_creatinine" name="serum_creatinine" placeholder="Enter the test value" type="text" class="validate">
+
+</div>
+<div class="input-field col s4">
+  <label for="serum_sodium"><b>Serum Sodium </b></label>
+  <br>
+<input id="serum_sodium" name="serum_sodium" placeholder="Enter the test value" type="text" class="validate">
+
+</div>
+<div class="input-field col s4">
+  <label for="sex"><b>Sex </b></label>
+  <br>
+<input id="sex" name="sex" placeholder="Enter 1 for Male and 0 Female" type="text" class="validate">
+
+</div>
+<div class="input-field col s4">
+  <label for="smoking"><b>Smoking</b></label>
+  <br>
+<input id="smoking" name="smoking" placeholder="Enter 1 for yes and 0 no" type="text" class="validate">
+
+</div>
+
+
+
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+            </form>
+        </div>
+        <h1 style="color:white;">{{pred}}</h1>
+    </div>
+    
+<div class="footer">
+    <p>Heart Failure  prediction project</p>
+    <h3>HacKARE</h3>
+    <p>@2023</p>
+
+</div>
+</body>
+</html>
